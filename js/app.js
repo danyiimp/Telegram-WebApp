@@ -1,4 +1,4 @@
-const tg = Telegram.WebApp;
+const tg = window.Telegram.WebApp;
 tg.expand();
 
 //AJAX Requests
@@ -26,13 +26,14 @@ function fetchData(dataToSend) {
         .catch(error => console.error(error));
 }
 
-sendStandard.addEventListener('click', async () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: "queryId", scenario: "standard"};
+sendStandard.addEventListener('click', () => {
+    // if (!tg.initDataUnsafe.query_id) {
+    //     alert('WebViewQueryId not defined');
+    //     return;
+    // }
+    // queryId = tg.initDataUnsafe.query_id
+    // data = {queryId: "queryId", scenario: "standard"};
+    data = {scenario: "standard"}
     fetchData(data);
     //tg.close();
 });
