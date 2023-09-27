@@ -1,0 +1,13 @@
+{
+  "name": "webapp",
+  "private": true,
+  "description": "WebApp для бота в Telegram",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "telegram-webapps": "^6.9.0"
+  }
+}

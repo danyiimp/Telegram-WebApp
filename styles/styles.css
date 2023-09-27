@@ -1,0 +1,226 @@
+@font-face {
+    font-family: "Buyan";
+    font-style: normal;
+    font-weight: 400;
+  
+    font-display: swap;
+    src: url("../fonts/buyanregular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Buyan";
+    font-style: normal;
+    font-weight: 700;
+  
+    font-display: swap;
+    src: url("../fonts/buyanbold.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page__body {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: "Buyan", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--tg-theme-text-color);
+    background-color: var(--tg-theme-bg-color);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 315px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-container__title {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.main-container__hint {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 16px;
+    font-family: "Buyan", system-ui, sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* SERVICES STYLES */
+
+.main-container__services {
+    margin-bottom: 40px;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.services__item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+}
+
+.services__item::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services__item--projector::before {
+    background-image: url(../img/icons/projector.png);
+}
+
+.services__item--karaoke::before {
+    background-image: url(../img/icons/karaoke.png);
+}
+
+.services__item--acoustic-system::before {
+    background-image: url(../img/icons/acoustic_system.png);
+}
+
+
+.services__item--dice::before {
+    background-image: url(../img/icons/dice.png);
+}
+
+.services__item--hookah::before {
+    background-image: url(../img/icons/hookah.png);
+}
+
+.services__item--projector--bench::before {
+    background-image: url(../img/icons/bench.png);
+}
+
+.services__item--parking::before {
+    background-image: url(../img/icons/parking.png);
+}
+
+.services__item--loud-music::before {
+    background-image: url(../img/icons/loud_music.png);
+}
+
+.services__item--grill::before {
+    background-image: url(../img/icons/grill.png);
+}
+
+.services__item--light-music::before {
+    background-image: url(../img/icons/light_music.png);
+}
+
+.services__item--basketball::before {
+    background-image: url(../img/icons/basketball.png);
+}
+
+.services__item--decor::before {
+    background-image: url(../img/icons/decor.png);
+}
+
+.services__subtitle {
+    display: flex;
+    margin: 0;
+    padding-left: 10px;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.services__description {
+    margin: 10px 0;
+    grid-column: 1/-1;
+}
+
+
+/* SCENARIOS STYLES */
+
+.scenarios__title {
+    margin: 0;
+    margin-right: auto;
+
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.scenarios__img {
+    position: relative;
+    top: -40px;
+
+    width: 100%;
+    height: auto;
+}
+
+/* .scenarios__item-inner {
+    display: flex;
+    align-items: center;
+} */
+
+.scenarios__confirm {
+    position: relative;
+    top: -70px;
+
+    display: block;
+    width: 100%;
+    height: 45px;
+
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 12px;
+
+    background-color: #1f5bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* 
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color) 
+*/
