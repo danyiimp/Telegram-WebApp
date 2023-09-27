@@ -27,13 +27,12 @@ function fetchData(dataToSend) {
 }
 
 sendStandard.addEventListener('click', () => {
-    // if (!tg.initDataUnsafe.query_id) {
-    //     alert('WebViewQueryId not defined');
-    //     return;
-    // }
-    // queryId = tg.initDataUnsafe.query_id
-    // data = {queryId: "queryId", scenario: "standard"};
-    data = {scenario: "standard"}
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "standard"}
     fetchData(data);
     //tg.close();
 });
