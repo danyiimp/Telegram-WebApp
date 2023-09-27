@@ -26,10 +26,17 @@ function fetchData(dataToSend) {
         .catch(error => console.error(error));
 }
 
-const query_id = tg.initDataUnsafe.query_id
+query_id = tg.initDataUnsafe.query_id
+
+console.log(query_id)
 
 sendStandard.addEventListener('click', async () => {
-    data = {query_id: "query_id" ,scenario: "standard"};
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    query_id = tg.initDataUnsafe.query_id
+    data = {query_id: "query_id", scenario: "standard"};
     fetchData(data);
     //tg.close();
 });
