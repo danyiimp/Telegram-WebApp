@@ -2,7 +2,7 @@
     font-family: "Buyan";
     font-style: normal;
     font-weight: 400;
-  
+
     font-display: swap;
     src: url("../fonts/buyanregular.woff") format("woff");
 }
@@ -11,7 +11,7 @@
     font-family: "Buyan";
     font-style: normal;
     font-weight: 700;
-  
+
     font-display: swap;
     src: url("../fonts/buyanbold.woff") format("woff");
 }
@@ -102,8 +102,7 @@ ul {
     margin-right: 10px;
     padding: 10px;
 
-    background-color: var(--tg-theme-button-color);
-    /* background-color: lightgray; */
+    background-color: var(--tg-theme-secondary-bg-color);
     border-radius: 10px;
 }
 
@@ -202,15 +201,14 @@ ul {
     padding: 15px;
     margin-bottom: 15px;
 
-    background-color: var(--tg-theme-button-color);
-    /* background-color: lightgray; */
+    background-color: var(--tg-theme-secondary-bg-color);
     border-radius: 20px;
 }
 
 .prices__subtitle {
     margin: 0;
     margin-bottom: 10px;
-    
+
     font-size: 24px;
     line-height: 20px;
     text-align: center;
@@ -284,11 +282,11 @@ ul {
     cursor: pointer;
 }
 
-/* 
+/*
 var(--tg-theme-bg-color)
 var(--tg-theme-text-color)
 var(--tg-theme-hint-color)
 var(--tg-theme-link-color)
 var(--tg-theme-button-color)
-var(--tg-theme-button-text-color) 
+var(--tg-theme-button-text-color)
 */
