@@ -36,8 +36,7 @@ sendStandard.addEventListener('click', () => {
     fetchData(data);
 });
 
-
-sendStandard.onclick( () => {
+sendStandard.addEventListener('touchstart', () => {
     if (!tg.initDataUnsafe.query_id) {
         alert('WebViewQueryId not defined');
         return;
