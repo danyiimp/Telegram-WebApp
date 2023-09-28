@@ -24,32 +24,64 @@ function fetchData(dataToSend) {
     fetch(backendUrl, requestOptions(dataToSend))
         .then(res => console.log(res))
         .catch(error => console.error(error));
-}
+};
 
-function sendScenario(scenario) {
+sendStandard.addEventListener('click', () => {
     if (!tg.initDataUnsafe.query_id) {
         alert('WebViewQueryId not defined');
         return;
     }
     queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: scenario};
+    data = {queryId: queryId, scenario: "standard"}
     fetchData(data);
-}
+});
 
-sendStandard.addEventListener('click', sendScenario("standard"))
-sendStandard.addEventListener('touchstart', sendScenario("standard"))
+sendBanquet.addEventListener('click', () => {
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "banquet"};
+    fetchData(data);
+});
 
-sendBanquet.addEventListener('click', sendScenario("banquet"))
-sendBanquet.addEventListener('touchstart', sendScenario("banquet"))
+sendCinema.addEventListener('click', () => {
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "cinema"};
+    fetchData(data);
+});
 
-sendCinema.addEventListener('click', sendScenario("cinema"))
-sendCinema.addEventListener('touchstart', sendScenario("cinema"))
+sendConference.addEventListener('click', () => {
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "conference"};
+    fetchData(data);
+});
 
-sendConference.addEventListener('click', sendScenario("conference"))
-sendConference.addEventListener('touchstart', sendScenario("conference"))
+sendParty.addEventListener('click', () => {
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "party"};
+    fetchData(data);
+});
 
-sendParty.addEventListener('click', sendScenario("party"))
-sendParty.addEventListener('touchstart', sendScenario("party"))
-
-sendBuffet.addEventListener('click', sendScenario("buffet"))
-sendBuffet.addEventListener('touchstart', sendScenario("buffet"))
+sendBuffet.addEventListener('click', () => {
+    if (!tg.initDataUnsafe.query_id) {
+        alert('WebViewQueryId not defined');
+        return;
+    }
+    queryId = tg.initDataUnsafe.query_id
+    data = {queryId: queryId, scenario: "buffet"};
+    fetchData(data);
+});
