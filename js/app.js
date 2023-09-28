@@ -22,21 +22,15 @@ function requestOptions(dataToSend) {
 
 function fetchData(dataToSend) {
     fetch(backendUrl, requestOptions(dataToSend))
-        .then(res => console.log(res))
+        .then((res) => {
+            if (res.ok) {
+                tg.close()
+            }
+        })
         .catch(error => console.error(error));
 };
 
 sendStandard.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "standard"}
-    fetchData(data);
-});
-
-sendStandard.addEventListener('touchstart', () => {
     if (!tg.initDataUnsafe.query_id) {
         alert('WebViewQueryId not defined');
         return;
