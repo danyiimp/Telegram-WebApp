@@ -34,35 +34,29 @@ sendStandard.addEventListener('click', () => {
     queryId = tg.initDataUnsafe.query_id
     data = {queryId: queryId, scenario: "standard"}
     fetchData(data);
-    //tg.close();
 });
 
 sendBanquet.addEventListener('click', () => {
     data = {scenario: "banquet"};
     fetchData(data);
-    tg.close();
 });
 
 sendCinema.addEventListener('click', () => {
     data = {scenario: "cinema"};
     fetchData(data);
-    tg.close();
 });
 
 sendConference.addEventListener('click', () => {
     data = {scenario: "conference"};
     fetchData(data);
-    tg.close();
 });
 
 sendParty.addEventListener('click', () => {
     data = {scenario: "party"};
     fetchData(data);
-    tg.close();
 });
 
 sendBuffet.addEventListener('click', () => {
     data = {scenario: "buffet"};
     fetchData(data);
-    tg.close();
 });
