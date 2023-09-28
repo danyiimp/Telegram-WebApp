@@ -87,20 +87,37 @@ ul {
 }
 
 .services__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.services__item-wrapper {
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .services__item {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-template-rows: 50px 1fr;
+    display: flex;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+
+    background-color: var(--tg-theme-button-color);
+    /* background-color: lightgray; */
+    border-radius: 10px;
 }
+
+.services__item:nth-child(2n) {
+    flex-direction: row-reverse;
+    margin-right: 0;
+}
+
 
 .services__item::before {
     content: "";
     display: block;
+    flex-shrink: 0;
+    margin-right: 10px;
     width: 50px;
     height: 50px;
 
@@ -108,6 +125,12 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.services__item:nth-child(2n)::before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
 
 .services__item--projector::before {
     background-image: url(../img/icons/projector.png);
@@ -161,16 +184,61 @@ ul {
 .services__subtitle {
     display: flex;
     margin: 0;
-    padding-left: 10px;
     align-items: center;
 
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 18px;
 }
 
-.services__description {
+.services__item:nth-child(2n) .services__subtitle {
+    text-align: right;
+}
+
+.prices__list {
+    margin-bottom: 70px;
+}
+
+.prices__item {
+    padding: 15px;
+    margin-bottom: 15px;
+
+    background-color: var(--tg-theme-button-color);
+    /* background-color: lightgray; */
+    border-radius: 20px;
+}
+
+.prices__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.prices__dates {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.prices__price {
+    display: block;
+
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* .services__description {
     margin: 10px 0;
     grid-column: 1/-1;
-}
+} */
 
 
 /* SCENARIOS STYLES */
