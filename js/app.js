@@ -26,37 +26,30 @@ function fetchData(dataToSend) {
         .catch(error => console.error(error));
 }
 
-sendStandard.addEventListener('click', () => {
+function sendScenario(scenario) {
     if (!tg.initDataUnsafe.query_id) {
         alert('WebViewQueryId not defined');
         return;
     }
     queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "standard"}
+    data = {queryId: queryId, scenario: scenario};
     fetchData(data);
-});
+}
 
-sendBanquet.addEventListener('click', () => {
-    data = {scenario: "banquet"};
-    fetchData(data);
-});
+sendStandard.addEventListener('click', sendScenario("standard"))
+sendStandard.addEventListener('touchstart', sendScenario("standard"))
 
-sendCinema.addEventListener('click', () => {
-    data = {scenario: "cinema"};
-    fetchData(data);
-});
+sendBanquet.addEventListener('click', sendScenario("banquet"))
+sendBanquet.addEventListener('touchstart', sendScenario("banquet"))
 
-sendConference.addEventListener('click', () => {
-    data = {scenario: "conference"};
-    fetchData(data);
-});
+sendCinema.addEventListener('click', sendScenario("cinema"))
+sendCinema.addEventListener('touchstart', sendScenario("cinema"))
 
-sendParty.addEventListener('click', () => {
-    data = {scenario: "party"};
-    fetchData(data);
-});
+sendConference.addEventListener('click', sendScenario("conference"))
+sendConference.addEventListener('touchstart', sendScenario("conference"))
 
-sendBuffet.addEventListener('click', () => {
-    data = {scenario: "buffet"};
-    fetchData(data);
-});
+sendParty.addEventListener('click', sendScenario("party"))
+sendParty.addEventListener('touchstart', sendScenario("party"))
+
+sendBuffet.addEventListener('click', sendScenario("buffet"))
+sendBuffet.addEventListener('touchstart', sendScenario("buffet"))
