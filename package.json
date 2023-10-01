@@ -7,7 +7,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "telegram-webapps": "^6.9.0"
+  "devDependencies": {
+    "swiper": "10.3.1",
+    "telegram-webapps": "6.9.0"
   }
 }

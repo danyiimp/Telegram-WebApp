@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <title>Loft5005</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body class="page__body">
@@ -12,76 +13,53 @@
         <h2 class="main-container__title">Сценарии</h2>
         <p class="main-container__hint">Выберите из предложенных вариантов</p>
         <section class="main-container__scenarios scenarios">
-            <ul class="scenarios__list">
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+            <div class="swiper">
+                <ul class="scenarios__list swiper-wrapper">
+                    <li class="scenarios__item swiper-slide" id="standard">
                         <h3 class="scenarios__title">
                             Стандарт
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/standard.png" alt="Стандартный сценарий">
-                    <button class="scenarios__confirm" id="standard" type="button">
-                        Выбрать
-                    </button>
-                </li>
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+                        <img class="scenarios__img" src="img/compressed/cropped/standard.png" alt="Стандартный сценарий">
+                    </li>
+                    <li class="scenarios__item swiper-slide" id="banquet">
                         <h3 class="scenarios__title">
                             Банкет
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/banquet.png" alt="Банкет">
-                    <button class="scenarios__confirm" id="banquet" type="button">
-                        Выбрать
-                    </button>
-                </li>
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+                        <img class="scenarios__img" src="img/compressed/cropped/banquet.png" alt="Банкет">
+                    </li>
+                    <li class="scenarios__item swiper-slide" id="cinema">
                         <h3 class="scenarios__title">
                             Кинотеатр
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/cinema.png" alt="Кинотеатр">
-                    <button class="scenarios__confirm" id="cinema" type="button">
-                        Выбрать
-                    </button>
-                </li>
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+                        <img class="scenarios__img" src="img/compressed/cropped/cinema.png" alt="Кинотеатр">
+                    </li>
+                    <li class="scenarios__item swiper-slide" id="conference">
                         <h3 class="scenarios__title">
                             Конференция
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/conference.png" alt="Конференция">
-                    <button class="scenarios__confirm" id="conference" type="button">
-                        Выбрать
-                    </button>
-                </li>
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+                        <img class="scenarios__img" src="img/compressed/cropped/conference.png" alt="Конференция">
+                    </li>
+                    <li class="scenarios__item swiper-slide" id="party">
                         <h3 class="scenarios__title">
                             Вечеринка
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/party.png" alt="Вечеринка">
-                    <button class="scenarios__confirm" id="party" type="button">
-                        Выбрать
-                    </button>
-                </li>
-                <li class="scenarios__item">
-                    <div class="scenarios__item-inner">
+                        <img class="scenarios__img" src="img/compressed/cropped/party.png" alt="Вечеринка">
+                    </li>
+                    <li class="scenarios__item swiper-slide" id="buffet">
                         <h3 class="scenarios__title">
                             Фуршет
                         </h3>
-                    </div>
-                    <img class="scenarios__img" src="img/compressed/buffet.png" alt="Фуршет">
-                    <button class="scenarios__confirm" id="buffet" type="button">
-                        Выбрать
-                    </button>
-                </li>
-            </ul>
+                        <img class="scenarios__img" src="img/compressed/cropped/buffet.png" alt="Фуршет">
+                    </li>
+                </ul>
+            </div>
+            <button class="scenarios__confirm" id="confirm_button" type="button">
+                Выбрать
+            </button>
         </section>
     </main>
     <script src="js/app.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 </html>

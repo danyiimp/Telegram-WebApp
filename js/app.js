@@ -3,12 +3,7 @@ tg.expand();
 
 //AJAX Requests
 const backendUrl = "http://localhost:8000"
-const sendStandard = document.getElementById("standard");
-const sendBanquet = document.getElementById("banquet");
-const sendCinema = document.getElementById("cinema");
-const sendConference = document.getElementById("conference");
-const sendParty = document.getElementById("party");
-const sendBuffet = document.getElementById("buffet")
+const sendButton = document.getElementById("confirm_button")
 
 function requestOptions(dataToSend) {
     return {
@@ -30,62 +25,74 @@ function fetchData(dataToSend) {
         .catch(error => console.error(error));
 };
 
-sendStandard.addEventListener('click', () => {
+
+sendButton.addEventListener("click", () => {
+    let activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
     if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "standard"}
-    fetchData(data);
+                alert('WebViewQueryId not defined');
+                return;
+            }
+            queryId = tg.initDataUnsafe.query_id
+            data = {queryId: queryId, scenario: activeSlide.id}
+            fetchData(data);
 });
 
-sendBanquet.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "banquet"};
-    fetchData(data);
-});
+// sendStandard.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "standard"}
+//     fetchData(data);
+// });
 
-sendCinema.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "cinema"};
-    fetchData(data);
-});
+// sendBanquet.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "banquet"};
+//     fetchData(data);
+// });
 
-sendConference.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "conference"};
-    fetchData(data);
-});
+// sendCinema.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "cinema"};
+//     fetchData(data);
+// });
 
-sendParty.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "party"};
-    fetchData(data);
-});
+// sendConference.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "conference"};
+//     fetchData(data);
+// });
 
-sendBuffet.addEventListener('click', () => {
-    if (!tg.initDataUnsafe.query_id) {
-        alert('WebViewQueryId not defined');
-        return;
-    }
-    queryId = tg.initDataUnsafe.query_id
-    data = {queryId: queryId, scenario: "buffet"};
-    fetchData(data);
-});
+// sendParty.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "party"};
+//     fetchData(data);
+// });
+
+// sendBuffet.addEventListener('click', () => {
+//     if (!tg.initDataUnsafe.query_id) {
+//         alert('WebViewQueryId not defined');
+//         return;
+//     }
+//     queryId = tg.initDataUnsafe.query_id
+//     data = {queryId: queryId, scenario: "buffet"};
+//     fetchData(data);
+// });
