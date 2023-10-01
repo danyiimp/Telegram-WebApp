@@ -63,8 +63,6 @@ ul {
     max-width: 315px;
     margin: 0 auto;
     padding: 0 10px;
-
-    overflow-y: scroll;
 }
 
 .main-container__title {
