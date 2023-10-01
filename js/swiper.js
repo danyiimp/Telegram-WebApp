@@ -11,7 +11,7 @@ function handleTouchStart(event) {
 function handleTouchMove(event) {
   var deltaY = this.startY - event.touches[0].clientY;
 
-  if (Math.abs(deltaY) > 5) {
+  if (Math.abs(deltaY) > 10) {
     event.preventDefault();
   }
 }
