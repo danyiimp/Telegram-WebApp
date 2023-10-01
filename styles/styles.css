@@ -52,8 +52,6 @@ ul {
     font-weight: 400;
     color: var(--tg-theme-text-color);
     background-color: var(--tg-theme-bg-color);
-
-    /* touch-action: none !important; */
 }
 
 .main-container {
@@ -238,13 +236,6 @@ ul {
     letter-spacing: 1px;
 }
 
-
-/* .services__description {
-    margin: 10px 0;
-    grid-column: 1/-1;
-} */
-
-
 /* SCENARIOS STYLES */
 
 .main-container__scenarios {
@@ -269,11 +260,6 @@ ul {
     margin-bottom: 20px;
 }
 
-/* .scenarios__item-inner {
-    display: flex;
-    align-items: center;
-} */
-
 .scenarios__confirm {
     display: block;
     width: 100%;
@@ -292,11 +278,6 @@ ul {
     cursor: pointer;
     user-select: none;
 }
-
-/* .swiper {
-    width: 100%;
-    height: 100px;
-} */
 
 /*
 var(--tg-theme-bg-color)
