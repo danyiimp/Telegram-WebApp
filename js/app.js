@@ -1,14 +1,6 @@
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-document.addEventListener('touchstart', function(e) {
-    document.documentElement.style.overflow = 'hidden';
-});
-
-document.addEventListener('touchend', function(e) {
-    document.documentElement.style.overflow = 'auto';
-});
-
 //AJAX Requests
 const backendUrl = "http://localhost:8000"
 const sendButton = document.getElementById("confirm_button")

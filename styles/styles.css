@@ -36,8 +36,8 @@ ul {
     list-style: none;
 }
 
-.fixed {
-    overflow-y: hidden;
+.page {
+    touch-action: manipulation;
 }
 
 .page__body {
@@ -52,6 +52,8 @@ ul {
     font-weight: 400;
     color: var(--tg-theme-text-color);
     background-color: var(--tg-theme-bg-color);
+
+    overflow: hidden;
 }
 
 .main-container {
@@ -59,8 +61,11 @@ ul {
     flex-direction: column;
 
     max-width: 315px;
+    height: calc(var(--vh)*100);
     margin: 0 auto;
     padding: 0 10px;
+
+    overflow-y: scroll;
 }
 
 .main-container__title {
