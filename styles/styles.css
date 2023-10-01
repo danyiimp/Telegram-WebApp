@@ -65,7 +65,7 @@ ul {
     margin-bottom: 10px;
 
     font-size: 32px;
-    line-height: 22px;
+    line-height: 28px;
     text-align: center;
 }
 
@@ -83,7 +83,7 @@ ul {
 /* SERVICES STYLES */
 
 .main-container__services {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .services__list {
@@ -194,7 +194,7 @@ ul {
 }
 
 .prices__list {
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 .prices__item {
@@ -241,6 +241,10 @@ ul {
 
 /* SCENARIOS STYLES */
 
+.main-container__scenarios {
+    margin-bottom: 50px;
+}
+
 .scenarios__title {
     margin: 0;
     margin-right: auto;
@@ -253,7 +257,7 @@ ul {
 .scenarios__img {
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 20px 10px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
