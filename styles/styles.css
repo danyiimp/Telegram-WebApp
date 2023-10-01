@@ -36,10 +36,6 @@ ul {
     list-style: none;
 }
 
-.fixed {
-    overflow-y: hidden;
-}
-
 .page__body {
     display: flex;
     width: 100%;
@@ -235,13 +231,6 @@ ul {
     text-align: center;
     letter-spacing: 1px;
 }
-
-
-/* .services__description {
-    margin: 10px 0;
-    grid-column: 1/-1;
-} */
-
 
 /* SCENARIOS STYLES */
 
