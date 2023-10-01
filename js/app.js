@@ -7,6 +7,13 @@ tg.expand();
 //     }
 // })
 
+document.addEventListener("touchmove", function (event) {
+    event.preventDefault();
+},
+    {
+        passive: false
+    });
+
 //AJAX Requests
 const backendUrl = "http://localhost:8000"
 const sendButton = document.getElementById("confirm_button")

@@ -37,7 +37,7 @@ ul {
 }
 
 .page {
-    touch-action: manipulation;
+    touch-action: none !important;
 }
 
 .page__body {
@@ -52,6 +52,8 @@ ul {
     font-weight: 400;
     color: var(--tg-theme-text-color);
     background-color: var(--tg-theme-bg-color);
+
+    touch-action: none !important;
 }
 
 .main-container {
