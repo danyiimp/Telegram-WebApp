@@ -18,3 +18,9 @@ function handleTouchMove(event) {
 
 slider.addEventListener('touchstart', handleTouchStart, false);
 slider.addEventListener('touchmove', handleTouchMove, false);
+document.addEventListener("touchmove", function (event) {
+  event.preventDefault();
+},
+  {
+      passive: false
+  });
