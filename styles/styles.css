@@ -242,6 +242,7 @@ ul {
 /* SCENARIOS STYLES */
 
 .main-container__scenarios {
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
@@ -275,6 +276,8 @@ ul {
     font-family: inherit;
     font-size: 18px;
     line-height: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 
     background-color: #1f5bff;
     color: #ffffff;
