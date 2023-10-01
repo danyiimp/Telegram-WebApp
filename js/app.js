@@ -1,11 +1,11 @@
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-tg.onEvent("viewportChanged", () => {
-    if (!tg.isExpanded) {
-        tg.expand()
-    }
-})
+// tg.onEvent("viewportChanged", () => {
+//     if (!tg.isExpanded) {
+//         tg.expand()
+//     }
+// })
 
 //AJAX Requests
 const backendUrl = "http://localhost:8000"
