@@ -1,6 +1,6 @@
 const swiper = new Swiper(".swiper", {
     loop: true,
-    cssMode: true
+    speed: 100
   });
 
 document.addEventListener("touchmove", function (event) {
