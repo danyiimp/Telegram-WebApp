@@ -26,6 +26,7 @@ function fetchData(dataToSend) {
 };
 
 sendButton.addEventListener("click", () => {
+    sendButton.setAttribute("disabled", "")
     let activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
     if (!tg.initDataUnsafe.query_id) {
                 alert('WebViewQueryId not defined');
