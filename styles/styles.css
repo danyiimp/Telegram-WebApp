@@ -283,10 +283,6 @@ ul {
     background-color: #0048b3;
 }
 
-.scenarios__confirm:active {
-    background-color: #002b66;
-}
-
 .scenarios__confirm:disabled {
     opacity: 0.65;
     pointer-events: none;
