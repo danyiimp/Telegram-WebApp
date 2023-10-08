@@ -284,6 +284,7 @@ ul {
 }
 
 .scenarios__confirm:disabled {
+    background-color: #1f5bff;
     opacity: 0.65;
     pointer-events: none;
 }
